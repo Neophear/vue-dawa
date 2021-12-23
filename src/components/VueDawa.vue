@@ -333,13 +333,13 @@ export default {
     },
     handleClickOutside (e) {
       const el = this.$refs.container
-      
-      //Handle scenario where VueDawa is inside a Bootstrap-Vue b-modal,
-      //which attempts to take focus before this event fires
+
+      // Handle scenario where VueDawa is inside a Bootstrap-Vue b-modal,
+      // which attempts to take focus before this event fires
       if (e.type === 'focus' && e.relatedTarget && e.relatedTarget === this.$refs.input) {
-        return;
+        return
       }
-      
+
       if (
         (e.target !== this.$refs.input &&
           e.target !== this.$refs.resultsList) ||
